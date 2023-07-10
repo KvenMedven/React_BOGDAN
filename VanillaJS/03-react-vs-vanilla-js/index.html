@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>React Hello World</title>
+</head>
+<body>
+
+<div id="react-app"></div>
+<div id="vanilla-app"></div>
+
+
+
+
+<script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+<script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+<script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+<script >
+  const props = {text:'Helo from React'}
+  const reactHeading = React.createElement('h1', props, props.text )
+  console.log(reactHeading)
+  const container = document.getElementById('react-app')
+  const root = ReactDOM.createRoot(container)
+
+  root.render(reactHeading)
+
+
+</script>
+<script>
+  const vanillaJsHeading = document.createElement('h1')
+  vanillaJsHeading.textContent = "VanillaJS"
+  console.log(vanillaJsHeading)
+  document.getElementById('vanilla-app').appendChild(vanillaJsHeading)
+</script>
+
+</body>
+</html>
